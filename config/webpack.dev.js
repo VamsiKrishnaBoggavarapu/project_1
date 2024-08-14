@@ -5,8 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
   mode: "development",
   entry: {
-    auth: path.resolve(__dirname, "../src/app/auth/script.js"),
-    index: path.resolve(__dirname, "../src/app/profile/script.js"),
+    index: path.resolve(__dirname, "../src/script.js"),
   },
   output: {
     path: path.resolve(__dirname, "../dist"),
@@ -27,23 +26,14 @@ module.exports = {
   },
   module: {
     rules: [
-      // {
-      //   test: /\.css$/,
-      //   use: ["style-loader", "css-loader", "sass-loader"],
-      // },
       {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader", "postcss-loader"],
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["@babel/preset-env"],
-          },
-        },
+        use: ["babel-loader"],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -56,14 +46,9 @@ module.exports = {
       filename: "[name].css",
     }),
     new HtmlWebpackPlugin({
-      template: "src/app/profile/index.html",
+      template: "src/index.html",
       filename: "index.html",
       chunks: ["index"],
-    }),
-    new HtmlWebpackPlugin({
-      template: "src/app/auth/index.html",
-      filename: "auth.html",
-      chunks: ["auth"],
     }),
   ],
 };

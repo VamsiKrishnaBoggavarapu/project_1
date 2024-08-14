@@ -6,8 +6,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   mode: "production",
   entry: {
-    auth: path.resolve(__dirname, "../src/app/auth/script.js"),
-    index: path.resolve(__dirname, "../src/app/profile/script.js"),
+    index: path.resolve(__dirname, "../src/script.js"),
   },
   output: {
     path: path.resolve(__dirname, "../dist"),
@@ -18,18 +17,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader", "postcss-loader"],
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["@babel/preset-env"],
-          },
-        },
+        use: ["babel-loader"],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -41,19 +35,9 @@ module.exports = {
     minimizer: [
       new TerserPlugin(),
       new HtmlWebpackPlugin({
-        template: "src/app/profile/index.html",
+        template: "src/index.html",
         filename: "index.html",
         chunks: ["index"],
-        minify: {
-          removeAttributeQuotes: true,
-          collapseWhitespace: true,
-          removeComments: true,
-        },
-      }),
-      new HtmlWebpackPlugin({
-        template: "src/app/auth/index.html",
-        filename: "auth.html",
-        chunks: ["auth"],
         minify: {
           removeAttributeQuotes: true,
           collapseWhitespace: true,
