@@ -3,11 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Vamsi Krishna Boggavarapu" />
+    <meta
+      name="description"
+      content="View the Bio, Skills, Experience and Education details. " />
+    <title>Profile</title>
+    <link
+      rel="icon"
+      href="./asserts/favIcon.svg"
+      type="image/svg+xml"
+      sizes="any" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
   </head>
-  <body>
-    <section class="top-section">
-      <h1 class="text-red-900">VAMSI KRISHNA BOGGAVARAPU</h1>
+  <body class="mx-12 bg-gray-200 font-firaSans text-gray-600">
+    <section class="section section-title">
+      <h1
+        id="fullName"
+        class="text-black text-5xl uppercase tracking-wider"></h1>
+    </section>
+
+    <section class="section section-summary">
+      <p id="summary" class="text-xl" />
+    </section>
+
+    <section class="section section-overview max-w-lg relative">
+      <div class="flex flex-row items-center gap-6 w-full">
+        <p id="expYears" class="text-9xl text-gray-950" />
+        <p class="text-2xl uppercase">Years of professional experience</p>
+        <p
+          id="expYearsPlaceholder"
+          class="absolute right-0 text-9xl text-gray-950" />
+      </div>
+    </section>
+    <section class="section section-workhistory">
+      <h1 class="text-black text-5xl uppercase tracking-wider">WorkHistory</h1>
+    </section>
+    <section class="section section-skills">
+      <h1 class="text-black text-5xl uppercase tracking-wider">Skills</h1>
+    </section>
+    <section class="section section-eduction">
+      <h1 class="text-black text-5xl uppercase tracking-wider">Eduction</h1>
+    </section>
+    <section class="section section-awards">
+      <h1 class="text-black text-5xl uppercase tracking-wider">Awards</h1>
+    </section>
+    <section class="section section-timeline">
+      <h1 class="text-black text-5xl uppercase tracking-wider">Timeline</h1>
     </section>
   </body>
 </html>

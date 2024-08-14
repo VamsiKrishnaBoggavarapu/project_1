@@ -1,0 +1,130 @@
+{
+  "firstName": "Vamsi Krishna",
+  "lastName": "Boggavarapu",
+  "location": "Hyderabad",
+  "experience": {
+    "years": "9",
+    "month": "0"
+  },
+  "summary": "Experienced Senior Software Engineer with strong problem-solving skills and good team-leading skills. I am passionate about using my skills to lead innovative projects and achieve goals collaboratively. I am aspiring for a role that will enable me to further enhance my skills and contribute to organizational growth.",
+  "workHistory": [
+    {
+      "companyName": "Cognizant Technology Solution",
+      "role": "Senior Software Engineer",
+      "startDate": "11/29/2018",
+      "endDate": "Current",
+      "projectDetails": [
+        {
+          "title": "Verizon - 5G",
+          "details": [
+            "Verizon 5G Application supports Web, Mobile Browser and Mobile App.",
+            "The One-Click-Pay feature to enhance the user experience. Users can easily pay their bills with a single click, streamlining and improving the payment process.",
+            "The Arrangements feature allows users to confidently schedule payments for specific dates, ensuring a seamless bill management experience.",
+            "The One-Time Payment feature has been implemented to facilitate bill payments, enabling users to make payments using a mobile number without having to log into the application. This feature offers greater flexibility and convenience for all users.",
+            "The AutoPay feature allows payments to occur automatically every month, providing a convenient and stress-free experience for users.",
+            "The Wallet Management feature enables users to add bank accounts, credit cards, debit cards, and gift cards for efficient payment management."
+          ],
+          "techStack": "React JS, Redux, JavaScript, HTML, CSS, Jest Testing Lib, Web Pack, Babel"
+        },
+        {
+          "title": "Aspen Connect APP (Android & iOS)",
+          "details": [
+            "The Aspen Connect App is specially designed for doctors.",
+            "It provides a single platform to manage emails, chat, appointments, and planned surgery details, which helps save time and avoids the complexity of using multiple applications.",
+            "Key features include Microsoft authentication, Microsoft service APIs, integrated Outlook & Teams, appointment details shown in the calendar, and sending reminders."
+          ],
+          "techStack": "Xamarin Forms, C#, MVVM, Microsoft API's and Unit test cases."
+        }
+      ]
+    },
+    {
+      "companyName": "SAIS It Services India Pvt Ltd",
+      "role": "Software Engineer",
+      "startDate": "01/01/2018",
+      "endDate": "11/28/2018",
+      "projectDetails": [
+        {
+          "title": "UGO APP (Android & iOS)",
+          "details": [
+            "UGO is a cab services app that aims to simplify and greatly assist users with their transportation needs.",
+            "When booking cab services, the estimated price and time shown to the rider will be calculated based on traffic, tollgate fees and distance.",
+            "Key features include OAUTH Authentication, Live Tracking & Chat, Google Maps Integration and Google Location Search.",
+            "It will save time and effort for the customer.",
+            "Developed scalable and maintainable code, ensuring long-term stability of the software."
+          ],
+          "techStack": "Xamarin Forms, C#, MVVM, SQLite local DB, Google API's and Twilio"
+        }
+      ]
+    },
+    {
+      "companyName": "Management Health Solution",
+      "role": "Junior Software Engineer",
+      "startDate": "07/06/2015",
+      "endDate": "12/25/207",
+      "projectDetails": [
+        {
+          "title": "ATPAR APP (Android & iOS)",
+          "details": [
+            "The ATPAR application serves as an effective inventory management system.",
+            "The Cycle Count module facilitates the regular counting of inventory items every 6 months.",
+            "The Cart Count module streamlines the daily counting of store items.",
+            "The Pick module enables the efficient retrieval of items from the inventory.",
+            "The Delivery module ensures the prompt delivery of items from the inventory to the stores",
+            "The Put away module provides guidance on the optimal placement of items.",
+            "The Stock Management module empowers stores to submit new stock requests to the inventory.",
+            "Increase revenue by 25%."
+          ],
+          "techStack": "Xamarin Forms, C#, MVVM, SQLite and Scanning QR codes."
+        }
+      ]
+    }
+  ],
+  "skills": [
+    " React.JS",
+    "React Redux Toolkit",
+    "Next.JS",
+    "Node.JS",
+    "JavaScript",
+    "TypeScript",
+    "HTML, CSS",
+    "Jest Unit Testing",
+    "Xamarin Forms",
+    "C#"
+  ],
+  "education": [
+    {
+      "program": "Bachelor of Technology: Electronic Communication",
+      "institution": "NALANDA INSTITUTE OF ENGINEERING AND TECHNOLOGY",
+      "startDate": "06/01/2010",
+      "endDate": "04/01/2014",
+      "finalGrade": "72%",
+      "location": "Guntur"
+    },
+    {
+      "program": "Bachelor of Technology: Electronic Communication",
+      "institution": "PAVITHRA JUNIOR COLLEGE",
+      "startDate": "06/01/208",
+      "endDate": "04/01/2010",
+      "finalGrade": "84%",
+      "location": "ongole"
+    },
+    {
+      "program": "Bachelor of Technology: Electronic Communication",
+      "institution": "GOVT HIGH SCHOOL",
+      "startDate": "06/01/2007",
+      "endDate": "04/01/2008",
+      "finalGrade": "74%",
+      "location": "Kondepi"
+    }
+  ],
+  "achievements": [
+    {
+      "name": "Certificate of Excellence",
+      "year": "2023"
+    },
+    {
+      "name": "Certificate of Outstanding Performance",
+      "year": "2022"
+    }
+  ]
+}

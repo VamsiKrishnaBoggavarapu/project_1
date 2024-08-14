@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .section {
+    @apply bg-white border-2 border-gray-300 shadow-sm p-6;
+  }
+}
