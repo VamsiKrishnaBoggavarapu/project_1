@@ -7,64 +7,101 @@
     <meta name="author" content="Vamsi Krishna Boggavarapu" />
     <meta
       name="description"
-      content="View the Bio, Skills, Experience and Education details. "
-    />
+      content="View the Bio, Skills, Experience and Education details. " />
     <title>Profile</title>
     <link
       rel="icon"
       href="./asserts/favIcon.svg"
       type="image/svg+xml"
-      sizes="any"
-    />
+      sizes="any" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
   </head>
-  <body class="mx-12 bg-gray-100 font-firaSans text-gray-600">
-    <section class="section section-title">
-      <h1
-        id="fullName"
-        class="text-black text-5xl uppercase tracking-wider"
-      ></h1>
-    </section>
+  <body class="bg-gray-50 font-firaSans text-gray-600">
+    <main class="max-w-5xl m-auto overflow-hidden">
+      <!-- Profile Heading -->
+      <section id="profileHeader" class="bg-white">
+        <img
+          class="w-full opacity-85 hover:opacity-90 cursor-pointer transition-all"
+          src="./asserts/profileImage.jpeg" />
+        <h1
+          id="fullName"
+          class="text-black text-center uppercase tracking-widest font-medium py-16 border-2 drop-shadow-sm text-5xl"></h1>
+      </section>
 
-    <section class="section section-summary">
-      <p id="summary" class="text-xl" />
-    </section>
+      <!-- Summary Section -->
+      <section id="summarySection">
+        <section class="subTitleWrapper">
+          <img src="./asserts/summary.svg" />
+          <h2 class="subTitle">summary</h2>
+        </section>
+        <p id="summary" class="detailsWrapper text-lg" />
+      </section>
 
-    <section class="section section-overview max-w-lg relative">
-      <div class="flex flex-row items-center gap-6 w-full">
-        <p id="expYears" class="text-8xl text-gray-950" />
-        <p class="text-2xl font-bold uppercase tracking-wide">
-          Years of professional experience
-        </p>
-        <p
-          id="expYearsPlaceholder"
-          class="absolute right-0 text-13xl text-gray-950 opacity-5"
-        />
-      </div>
-    </section>
+      <!-- Overview Section -->
+      <section id="overviewSection">
+        <section class="subTitleWrapper">
+          <img src="./asserts/overview.svg" />
+          <h2 class="subTitle">Overview</h2>
+        </section>
+        <section
+          class="flex flex-row items-center gap-6 w-full max-w-lg relative detailsWrapper">
+          <p id="expYears" class="text-8xl text-gray-950" />
+          <p class="text-2xl font-bold uppercase">
+            Years of professional experience
+          </p>
+          <p
+            id="expYearsPlaceholder"
+            class="absolute -right-3 text-13xl text-gray-950 opacity-5" />
+        </section>
+      </section>
 
-    <section class="section section-workhistory">
-      <h1 class="text-black text-5xl uppercase tracking-wider">WorkHistory</h1>
-    </section>
+      <!-- WorkHistory Section -->
+      <section id="workHistorySection">
+        <section class="subTitleWrapper">
+          <img src="./asserts/work.svg" />
+          <h2 class="subTitle">Work History</h2>
+        </section>
+      </section>
 
-    <section id="skillsSection" class="section">
-      <div id="skillsWrapper" class="grid grid-cols-2">
-       
-      </div>
-    </section>
-    <section class="section section-eduction">
-      <h1 class="text-black text-5xl uppercase tracking-wider">Eduction</h1>
-    </section>
-    <section class="section section-awards">
-      <h1 class="text-black text-5xl uppercase tracking-wider">Awards</h1>
-    </section>
-    <section class="section section-timeline">
-      <h1 class="text-black text-5xl uppercase tracking-wider">Timeline</h1>
-    </section>
+      <!-- Skills Section -->
+      <section id="skillsSection">
+        <section class="subTitleWrapper">
+          <img src="./asserts/overview.svg" />
+          <h2 class="subTitle">Skills</h2>
+        </section>
+        <section
+          id="skillsWrapper"
+          class="detailsWrapper grid grid-cols-2"></section>
+      </section>
+
+      <!-- Eduction Section -->
+      <section id="educationSection">
+        <section class="subTitleWrapper">
+          <img src="./asserts/education.svg" />
+          <h2 class="subTitle">Education</h2>
+        </section>
+      </section>
+
+      <!-- Achievements Section -->
+      <section id="achieveSection">
+        <section class="subTitleWrapper">
+          <img src="./asserts/award.svg" />
+          <h2 class="subTitle">Achievements</h2>
+        </section>
+        <ul id="awards" class="detailsWrapper list-disc pl-10" />
+      </section>
+
+      <!-- Timeline Section -->
+      <section id="timelineSection">
+        <section class="subTitleWrapper">
+          <img src="./asserts/timeline.svg" />
+          <h2 class="subTitle">Timeline</h2>
+        </section>
+      </section>
+    </main>
   </body>
 </html>

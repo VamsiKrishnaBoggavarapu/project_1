@@ -1,6 +1,7 @@
 import "./style.css";
-import "./asserts/favIcon.svg";
+import "./asserts";
 import profileData from "./asserts/data.json";
+import workProfile from "./workProfile";
 
 const fullName = document.getElementById("fullName");
 const summary = document.getElementById("summary");
@@ -18,7 +19,8 @@ function skillItemComponent(item) {
   skillItem.className = "flex flex-row items-center gap-2";
 
   const indicator = document.createElement("div");
-  indicator.className = "h-4 w-4 rounded-full bg-white border-4 border-black shadow-inner";
+  indicator.className =
+    "h-4 w-4 rounded-full bg-white border-4 border-black shadow-inner";
 
   const skillsLi = document.createElement("li");
   skillsLi.textContent = item;
@@ -36,7 +38,7 @@ function prepareSkilsLayout() {
   );
   [skillSet1, skillSet2].forEach((x) => {
     const skillsUL = document.createElement("ul");
-    skillsUL.className ="flex flex-col gap-2";
+    skillsUL.className = "flex flex-col gap-2";
     x?.forEach((y) => {
       skillsUL.append(skillItemComponent(y));
     });
@@ -44,4 +46,65 @@ function prepareSkilsLayout() {
   });
 }
 
+function prepareWorkLayout() {
+  const workHistorySection = document.getElementById("workHistorySection");
+  profileData?.workHistory?.forEach((details) => {
+    const workSection = document.createElement("section");
+    workSection.className =
+      "detailsWrapper max-w-3xl grid grid-cols-autoOneFrameColumns gap-4 mb-8";
+
+    const workLogo = document.createElement("img");
+    workLogo.src = "./asserts/work.svg";
+    workLogo.className = "col-start-1 bg-gray-200 p-2 rounded-md";
+
+    const companyDetailsSection = document.createElement("section");
+    companyDetailsSection.className = "col-start-2";
+
+    const role = document.createElement("p");
+    const companyName = document.createElement("p");
+    const duration = document.createElement("p");
+
+    role.textContent = details?.role;
+    companyName.textContent = details?.companyName;
+    duration.textContent = `${details?.startDate} - ${details?.endDate}`;
+
+    companyDetailsSection.append(role, companyName, duration);
+
+    const projectSection = document.createElement("section");
+    projectSection.className = "col-start-2";
+
+    details?.projectDetails?.forEach((project) => {
+      const projectWrapper = document.createElement("section");
+      const title = document.createElement("p");
+      const ul = document.createElement("ul");
+      ul.className = "list-disc pl-10";
+      title.textContent = project?.title;
+      project?.details?.forEach((info) => {
+        const li = document.createElement("li");
+        li.textContent = info;
+        ul.appendChild(li);
+      });
+      projectWrapper.append(title, ul);
+      projectSection.appendChild(projectWrapper);
+    });
+
+    workSection.append(workLogo, companyDetailsSection, projectSection);
+
+    workHistorySection.append(workSection);
+  });
+}
+
+function prepareAwardLayout() {
+  const awards = document.getElementById("awards");
+
+  profileData?.achievements?.forEach((x) => {
+    const awardsLi = document.createElement("li");
+    awardsLi.textContent = `${x?.name} - ${x?.year}`;
+    awards.appendChild(awardsLi);
+  });
+}
+
+workProfile(profileData?.workHistory);
+
 prepareSkilsLayout();
+prepareAwardLayout();

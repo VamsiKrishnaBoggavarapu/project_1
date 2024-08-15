@@ -80,13 +80,14 @@
     }
   ],
   "skills": [
-    " React.JS",
-    "React Redux Toolkit",
-    "Next.JS",
-    "Node.JS",
+    "React JS",
+    "Next JS",
+    "Node JS",
+    "Express JS",
     "JavaScript",
     "TypeScript",
     "HTML, CSS",
+    "React Redux",
     "Jest Unit Testing",
     "Xamarin Forms",
     "C#"
