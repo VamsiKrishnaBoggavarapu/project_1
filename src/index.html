@@ -19,26 +19,86 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet" />
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .cube {
+        transform: translate(-50%, -50%);
+        animation: cube 10s ease-in forwards infinite;
+
+        &:nth-child(2) {
+          animation-delay: 2s;
+        }
+        &:nth-child(3) {
+          animation-delay: 4s;
+        }
+        &:nth-child(4) {
+          animation-delay: 6s;
+        }
+        &:nth-child(5) {
+          animation-delay: 8s;
+        }
+        &:nth-child(6) {
+          animation-delay: 10s;
+        }
+      }
+
+      @keyframes cube {
+        from {
+          transform: scale(0) rotate(0deg) translate(-50%, -50%);
+          opacity: 1;
+        }
+        to {
+          transform: scale(7) rotate(960deg) translate(-50%, -50%);
+          opacity: 0;
+        }
+      }
+    </style>
   </head>
   <body class="bg-gray-50 font-firaSans text-gray-600">
-    <main class="max-w-5xl m-auto overflow-hidden">
-      <!-- Profile Heading -->
-      <section id="profileHeader" class="bg-white">
-        <img
-          class="w-full opacity-85 hover:opacity-90 cursor-pointer transition-all"
-          src="./asserts/profileImage.jpeg" />
-        <h1
-          id="fullName"
-          class="text-black text-center uppercase tracking-widest font-medium py-16 border-2 drop-shadow-sm text-5xl"></h1>
-      </section>
+    <header
+      id="profileHeader"
+      class="flex flex-col gap-12 bg-gray-900 px-12 pt-6 pb-12 relative m-auto overflow-hidden">
+      <nav>
+        <ul
+          class="flex flex-row gap-5 justify-end text-gray-50 text-base md:text-xl">
+          <li class="hover:underline underline-offset-4">
+            <a href="#profileHeader">Home</a>
+          </li>
+          <li class="hover:underline underline-offset-4">
+            <a href="#skillsSection">Skills</a>
+          </li>
+          <li class="hover:underline underline-offset-4">
+            <a href="#workHistorySection">Work History</a>
+          </li>
+          <li class="hover:underline underline-offset-4">
+            <a href="#educationSection">Education</a>
+          </li>
+        </ul>
+      </nav>
+      <h1
+        id="fullName"
+        class="text-gray-50 text-center uppercase tracking-widest font-medium text-xl sm:text-3xl md:text-5xl"></h1>
 
+      <div class="cube left-1/4 top-10"></div>
+      <div class="cube left-1/3 top-10"></div>
+      <div class="cube left-1/2 top-20"></div>
+      <div class="cube left-2/3 top-16"></div>
+      <div class="cube left-20 top-10"></div>
+      <div class="cube left-60 top-24"></div>
+    </header>
+
+    <main id="main" class="max-w-5xl m-auto overflow-hidden">
       <!-- Summary Section -->
       <section id="summarySection">
         <section class="subTitleWrapper">
           <img src="./asserts/summary.svg" />
           <h2 class="subTitle">summary</h2>
         </section>
-        <p id="summary" class="detailsWrapper text-lg" />
+        <p id="summary" class="detailsWrapper" />
       </section>
 
       <!-- Overview Section -->
@@ -59,14 +119,6 @@
         </section>
       </section>
 
-      <!-- WorkHistory Section -->
-      <section id="workHistorySection">
-        <section class="subTitleWrapper">
-          <img src="./asserts/work.svg" />
-          <h2 class="subTitle">Work History</h2>
-        </section>
-      </section>
-
       <!-- Skills Section -->
       <section id="skillsSection">
         <section class="subTitleWrapper">
@@ -76,6 +128,14 @@
         <section
           id="skillsWrapper"
           class="detailsWrapper grid grid-cols-2"></section>
+      </section>
+
+      <!-- WorkHistory Section -->
+      <section id="workHistorySection">
+        <section class="subTitleWrapper">
+          <img src="./asserts/work.svg" />
+          <h2 class="subTitle">Work History</h2>
+        </section>
       </section>
 
       <!-- Eduction Section -->
@@ -94,14 +154,31 @@
         </section>
         <ul id="awards" class="detailsWrapper list-disc pl-10" />
       </section>
-
-      <!-- Timeline Section -->
-      <section id="timelineSection">
-        <section class="subTitleWrapper">
-          <img src="./asserts/timeline.svg" />
-          <h2 class="subTitle">Timeline</h2>
-        </section>
-      </section>
     </main>
+
+    <footer
+      id="footer"
+      class="flex flex-col gap-4 items-center justify-center w-full bg-gray-900 p-6 mt-24">
+      <section class="flex flex-row gap-6">
+        <a
+          href="mailto:vamsikrishna.bvk5@gmail.com"
+          class="w-10 p-1 rounded-md bg-white hover:scale-125 transition-all">
+          <img src="./asserts/mail.svg" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/vamsi-krishna-boggavarapu/"
+          class="w-10 p-1 rounded-md bg-white hover:scale-125 transition-all">
+          <img src="./asserts/linkedin.svg" />
+        </a>
+        <a
+          href="https://github.com/VamsiKrishnaBoggavarapu"
+          class="w-10 p-1 rounded-md bg-white hover:scale-125 transition-all">
+          <img src="./asserts/github.svg" />
+        </a>
+      </section>
+      <p class="text-white">
+        &copy; 2024 Vamsi Krishna Boggavarapu. All rights reserved.
+      </p>
+    </footer>
   </body>
 </html>

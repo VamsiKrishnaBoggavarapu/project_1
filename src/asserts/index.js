@@ -9,3 +9,6 @@ export * from "./website.svg";
 export * from "./work.svg";
 export * from "./profileImage.jpeg";
 export * from "./data.json";
+export * from "./linkedin.svg";
+export * from "./github.svg";
+export * from "./mail.svg";

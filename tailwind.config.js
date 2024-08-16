@@ -15,6 +15,9 @@ module.exports = {
       gridTemplateColumns: {
         autoOneFrameColumns: "auto 1fr",
       },
+      borderWidth: {
+        1: "1px",
+      },
     },
   },
   plugins: [],
